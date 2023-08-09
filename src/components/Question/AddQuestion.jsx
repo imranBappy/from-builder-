@@ -43,7 +43,7 @@ const AddQuestion = ({ title, id, index, handleChange, ...rest }) => {
 
     return (
         <div>
-            <div {...rest} data-index={index} draggable={isQuestionDragable} className='flex justify-between gap-10 items-center shadow-md p-5 my-5'>
+            <div {...rest} data-index={index} draggable={isQuestionDragable} className='flex justify-between gap-10  shadow-md p-5 my-5'>
                 <Question handleChange={handleChange} title={title} >
                     {
                         QuestionType

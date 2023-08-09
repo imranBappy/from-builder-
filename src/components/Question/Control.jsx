@@ -5,7 +5,7 @@ const Control = ({ types, setQuestionType }) => {
         setQuestionType(type.component)
     }
     return (
-        <div className='options_area w-1/3 '>
+        <div className='options_area w-1/3 mt-16'>
             <div className="mb-9" >
                 <select onChange={handleTypeChange} className="input mb-8" name="" id="">
                     {

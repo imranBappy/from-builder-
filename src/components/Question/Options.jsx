@@ -15,15 +15,20 @@ const Options = ({ state }) => {
     const handleDragEnter = (e) => {
         e.preventDefault()
         const index = e.target.getAttribute('data-index')
-        if (index || index === 0) {
-            setEnterItem(index)
-        }
+        if (index || index === 0) return setEnterItem(index)
+        setEnterItem(null)
     }
+    console.log(options);
     const handleDragEnd = (e) => {
         e.preventDefault()
         const index = Number(e.target.getAttribute('data-index'))
-        if (index || index === 0) {
-            const newInputs = [...options]
+        const newInputs = [...options]
+        if (
+            (index || index === 0)
+            && (enterItem || enterItem === 0) &&
+            (index !== enterItem) &&
+            (!newInputs[enterItem].isOption)
+        ) {
             const temp = newInputs[index]
             newInputs[index] = newInputs[enterItem]
             newInputs[enterItem] = temp

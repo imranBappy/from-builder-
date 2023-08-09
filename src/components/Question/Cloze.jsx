@@ -20,12 +20,11 @@ const Cloze = () => {
     const [options, setOption] = useState(init)
     return (
         <>
-            <div className='my-5  w-full'>
-                <input disabled className='input' placeholder='Enter you question?' type="text" />
+            <p>Preview*</p>
+            <div dangerouslySetInnerHTML={{ __html: title }} className=' min-h-[40px] p-2 w-full border border-slate-400 rounded'>
             </div>
             <Title state={[title, setTitle]} />
             <Options state={[options, setOption]} />
-
         </>
     );
 };

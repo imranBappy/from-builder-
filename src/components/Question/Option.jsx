@@ -24,7 +24,7 @@ const Option = ({ value, index, isOption, handleDelete, handleData, ...rest }) =
                     <input className='' type="radio" />
                 </div>
                 <div className='   '>
-                    <input onChange={handleChange} value={value} className='input ' placeholder={`Option ${index + 1} ${isOption && "(Optional)"}`} type="text" name="" id="" />
+                    <input onChange={handleChange} value={value} className='input ' placeholder={`Option ${index + 1} ${isOption ? "(Optional)" : ""}`} type="text" name="" id="" />
                 </div>
             </div>
             {
